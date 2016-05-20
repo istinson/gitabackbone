@@ -1,4 +1,13 @@
+<<<<<<< 028987435129839dd3a4df380daf5714f94d6753
 var app = angular.module('kirk');
+=======
+
+var express = require('express');
+var app = express();
+
+var app = angular.module('');
+
+>>>>>>> erver.js
 
 app.config(function($routeProvider, $httpProvider) {
   $routeProvider.when(
@@ -7,9 +16,5 @@ app.config(function($routeProvider, $httpProvider) {
       controller: 'searchCtrl',
       controllerAs: 'search'
     })
-<<<<<<< 21827d559bd9ae4d865319250d6300875be6c31a
 
-=======
-  
->>>>>>> added index and set up router
 });
