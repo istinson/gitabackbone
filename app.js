@@ -10,5 +10,9 @@ app.config(function($routeProvider, $httpProvider) {
       controller: 'searchCtrl',
       controllerAs: 'search'
     })
+<<<<<<< 21827d559bd9ae4d865319250d6300875be6c31a
 
+=======
+  
+>>>>>>> added index and set up router
 });
