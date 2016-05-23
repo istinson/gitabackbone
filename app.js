@@ -10,5 +10,5 @@ app.config(function($routeProvider, $httpProvider) {
       controller: 'searchCtrl',
       controllerAs: 'search'
     })
-  
+
 });
