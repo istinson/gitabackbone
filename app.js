@@ -1,7 +1,4 @@
-
 var app = angular.module('kirk');
-
-
 
 app.config(function($routeProvider, $httpProvider) {
   $routeProvider.when(
@@ -10,5 +7,5 @@ app.config(function($routeProvider, $httpProvider) {
       controller: 'searchCtrl',
       controllerAs: 'search'
     })
-  
+
 });
