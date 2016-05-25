@@ -19,8 +19,8 @@ etc....
 - any work you do will 'always' be ahead of the dev branch
 
 2) pulling from github/upstream
-- git checkout
--  pull from github 
+- git checkout kevin
+- pull from github 
 git pull upstream --rebase dev
 - all recent work is now on your local computer 
 
