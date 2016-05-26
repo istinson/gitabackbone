@@ -10,7 +10,10 @@ angular.module('app.request', [])
       request.sendRequest(data)
         .then(function(APIdata) {
           if (typeof APIdata === "object") {
-            console.log("yup, its an object");
+            
+            $scope.twitter = APIdata.data;
+            console.log($scope.twitter);
+            console.log("yup, its an object2");
           } else {
             $scope.renderAPIdata = function() {
               return $sce.trustAsHtml(APIdata.data);
