@@ -19,10 +19,8 @@ app.post('/', function(req, res) {
   // External API get request from url
   if (url === 'https://www.twitter.com') {
 
-      var loc = text.split(' ').slice(1).toString();
-      var first = loc[0].toUpperCase();
-      var remainder = loc.slice(1);
-      var location = first.concat(remainder);
+      var loc = req.body.text;
+      var location = loc.slice(8);
       console.log(location);
       var params = {id: tw.placeID(location)};
       console.log(tw.placeID(location));
