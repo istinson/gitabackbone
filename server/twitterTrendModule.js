@@ -45,13 +45,13 @@ var client = new twitter({
 
 //Makes the GET request.
 
-exports.twitterGetter = function (params) {
+exports.twitterGetter = function (params, cb) {
 client.get(url, params, function(error, trends, response){
   if (error) {
     console.log(error);
   } else if (!error) {
     //We will want to do something other than console.log this.
-    console.log(trends[0].trends);
+    cb(trends[0].trends);
   }
 });
 

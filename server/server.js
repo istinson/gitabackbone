@@ -26,8 +26,10 @@ app.post('/', function(req, res) {
       console.log(location);
       var params = {id: tw.placeID(location)};
       console.log(tw.placeID(location));
-      tw.twitterGetter(params);
-
+      tw.twitterGetter(params, function (twitData) {
+        res.send(twitData);
+      });
+      
   } else {
 
     axios.get(url)

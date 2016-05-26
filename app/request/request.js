@@ -9,10 +9,14 @@ angular.module('app.request', [])
 
       request.sendRequest(data)
         .then(function(APIdata) {
-          $scope.renderAPIdata = function() {
-            return $sce.trustAsHtml(APIdata.data);
-          };
-          console.log('Client side APIdata: ' + APIdata); // APIdata not logging to console correctly, needs fix
+          if (typeof APIdata === "object") {
+            console.log("yup, its an object");
+          } else {
+            $scope.renderAPIdata = function() {
+              return $sce.trustAsHtml(APIdata.data);
+            };
+            console.log('Client side APIdata: ' + APIdata); // APIdata not logging to console correctly, needs fix
+         }
         })
         .catch(function (error) {
           console.error('Rendering HTML for APIdata unsuccessful ' + error);
