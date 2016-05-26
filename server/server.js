@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var axios = require('axios');
+var twitter = require('twitter');
+var tw = require('./twitterTrendModule.js')
 
 var port = process.env.PORT || 3000;
 
@@ -15,18 +17,34 @@ app.post('/', function(req, res) {
   console.log('url: ' + url);
 
   // External API get request from url
-  axios.get(url)
-    .then(function(response) {
-      res.send(response.data); // Send data to client for rendering
-    })
-    .catch(function (response) {
-      console.log('GET request from ' + url + ' unsuccessful: ' + response);
-    });
+  if (url === 'https://www.twitter.com') {
+
+      var loc = text.split(' ').slice(1).toString();
+      var first = loc[0].toUpperCase();
+      var remainder = loc.slice(1);
+      var location = first.concat(remainder);
+      console.log(location);
+      var params = {id: tw.placeID(location)};
+      console.log(tw.placeID(location));
+      tw.twitterGetter(params);
+
+  } else {
+
+    axios.get(url)
+      .then(function(response) {
+        res.send(response.data); // Send data to client for rendering
+      })
+      .catch(function (response) {
+        console.log('GET request from ' + url + ' unsuccessful: ' + response);
+      });
+  }
 });
 
 app.listen(port, function () {
   console.log('Server listening on port 3000');
 });
+
+tw.working();
 
 function parseURL(text) {
   var url;
@@ -38,7 +56,10 @@ function parseURL(text) {
   } else if (text.includes('reddit')) {
     word = word.join('');
     url = 'https://www.reddit.com/r/' + word;
+  } else if (text.includes('twitter')) {
+    url = 'https://www.twitter.com'
   }
 
   return url;
 }
+
