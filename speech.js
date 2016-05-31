@@ -24,7 +24,6 @@
     console.log(event); // To see how the event object looks like
   };
 
-  // User gets 5 seconds to say the speech, will change later on
   setTimeout(function() {
     recognition.stop();
     console.log('speech ended');
