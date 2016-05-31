@@ -1,0 +1,25 @@
+{
+  "name": "kirk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricochen/kirk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricochen/kirk/issues"
+  },
+  "homepage": "https://github.com/ricochen/kirk#readme",
+  "dependencies": {
+    "axios": "^0.11.1",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}

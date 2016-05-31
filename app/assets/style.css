@@ -1,0 +1,28 @@
+.home {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 3em;
+  opacity: .8;
+  position: absolute;
+}
+.names{
+  color: white;
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  opacity: .8;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+#waves {
+  position: fixed;
+}
+
+.bg {
+  background: #1A2980;
+  background: -webkit-linear-gradient(to left, #1A2980 , #26D0CE);
+  background: linear-gradient(to left, #1A2980 , #26D0CE);
+}
