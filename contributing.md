@@ -1,4 +1,4 @@
-gcontrib guidelines
+contrib guidelines
 
 assuming you have forked the repo and cloned to your own computer.
 
